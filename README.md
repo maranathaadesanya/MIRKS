@@ -1,2 +1,2 @@
 # MIRKS
-An image compression file
+An image compression web application

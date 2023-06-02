@@ -25,7 +25,7 @@ The MIRKS Image Compression App is a web application that allows users to compre
 
 1. Clone the repository:
 
-git clone https://github.com/maranathaadesanya/mirks.git
+git clone https://github.com/maranathaadesanya/MIRKS.git
 
 2. Navigate to the project directory:
 

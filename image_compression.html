@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Compression App</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compression App</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="compressBtn">Compress Image</button>
+        <div id="resultContainer"></div>
+    </div>
+
+    <script>
+        function compressImage(file) {
+            var formData = new FormData();
+            formData.append("image", file);
+
+            fetch("image_compression.py", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                var compressedImageURL = URL.createObjectURL(blob);
+                var resultContainer = document.getElementById("resultContainer");
+                var img = document.createElement("img");
+                img.src = compressedImageURL;
+                resultContainer.appendChild(img);
+            })
+            .catch(error => {
+                console.error("Error occurred during image compression:", error);
+            });
+        }
+
+        function handleImageUpload(event) {
+            var file = event.target.files[0];
+            if (file) {
+                compressImage(file);
+            }
+        }
+
+        document.getElementById("imageInput").addEventListener("change", handleImageUpload);
+    </script>
+</body>
+</html>

@@ -21,4 +21,3 @@ def compress_image(input_image_path, output_image_path):
 input_image = "input.jpg"
 output_image = "output.jpg"
 compress_image(input_image, output_image)
-

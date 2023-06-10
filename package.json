@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Maranatha Adesanya",
   "dependencies": {
-    "flask": "^2.0.1",
+    "flask": "^2.2.2",
     "libjpeg": "^2.1.0"
   },
   "scripts": {

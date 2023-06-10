@@ -1,6 +1,10 @@
 import subprocess
 import os
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route('/')
 def compress_image(input_image_path, output_image_path):
     # Path to the compiled C program
     c_program = "./image_compression"

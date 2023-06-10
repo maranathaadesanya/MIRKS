@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRKS Image Compression</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MIRKS Image Compression</h1>
+        <p>Compress your images using the powerful MIRKS algorithm.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Upload Image</h2>
+            <form id="upload-form">
+                <input type="file" id="image-input" accept="image/*">
+                <button type="submit" id="compress-btn">Compress</button>
+            </form>
+        </section>
+        <section id="result-section" class="hidden">
+            <h2>Compression Result</h2>
+            <div id="result-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 MIRKS Image Compression</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

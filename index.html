@@ -1,17 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIRKS Image Compression</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MAMIDAV INT LTD: home</title>
+<style>
+    body{
+background-color: #ffffff;
+  background-size: auto;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /*grid-template-columns: auto 650px 20px;
+  border-style: solid;
+  border-color: black;
+  margin: 0px;
+  padding: 0px;*/
+  }
+
+  .bgimg{
+    opacity: 5%;
+    position: absolute;
+    margin-left: 10px;
+    /*top: 10%;
+    left: 3%;*/
+  }
+
+  .bgimg img {
+    width: 1300px;
+    height: 1300px;
+  }
+
+ .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 9%;
+    left: 90%;
+    /*margin-left: 100px;
+  border-color: blue;
+  border-style: solid;
+  margin-top: 25px;
+  background-color: #3498DB;*/
+  }
+
+  /*.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }*/
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .header {
+    float: center;
+    margin-left: 220px;
+    position: absolute;
+    top: 1%;
+    left: 5px;
+  }
+
+  .header h1 {
+    color: #000000;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    font-size: 45px;
+    font-family: cursive;
+  }
+
+  /*.grid-container {
+    display: grid;
+    grid-template-columns: 1150px 120px;
+    border-style: dashed;
+    border-color: black;
+    padding: 20px 20px;
+  }*/
+
+  /*.grid-container > div{
+    margin-top: 80px;
+    margin-left: 50px;
+    border-style: dashed;
+    border-color: black;
+    grid-area: 100px;
+  }*/
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: 5s;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 5s;
+    text-align: center;
+  }
+
+  .dropdown a:hover {background-color: #ddd;}
+
+  .show {
+    display: block;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  .logo{
+    width: 120px;
+    height: 120px;
+    grid-area: 150px;
+    /*border-color: black;
+    border-style: dashed;*/
+  }
+  
+  .Search {
+    position: absolute;
+    width: 580px;
+    height: 45px;
+    margin-left: 375px;
+  }
+  
+  form.searchbox input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 2px solid #f5f5f5; 
+    float: left;
+    width: 500px;
+    height: 10px;
+    margin-left: 7px;
+    background: #74747493;
+    margin-top: 4px;
+	}
+
+  form.searchbox button {
+    float: right;
+    margin-right: 7px;
+    margin-top: 4px;
+    width: 40px;
+    height: 35px;
+    background: #000;
+    color: white;
+    font-size: 17px;
+    border: 2px solid #f1f1f1;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.searchbox button:hover {
+    background: linear-gradient(to right, rgb(245, 3, 172), rgb(109, 10, 48)); 
+  }
+
+  /*.box{
+    width: 500px;
+    height: 310px;
+    position: absolute;
+    top: 50%;
+    left: 740px;
+    background: linear-gradient(to right, rgb(245, 3, 172), rgb(219, 84, 158));
+  }*/
+
+  .slideshow {display: block;}
+  
+  .banner {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top: 50px;
+    margin-top: 100px;
+    /*max-width: 600px;
+    height: 300px;
+    margin: 0 370px 0 370px;
+    position: relative;
+    /*background-color: #8c00ff54;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.2);*/
+  }
+
+  .banner img {
+    vertical-align: middle;
+    height: 300px;
+    /*margin-left: 400px;*/
+  }
+
+  .banner :hover{
+    color: rgb(255, 255, 255);
+  }
+ 
+  /*.info{
+    border-style: ridge;
+    width: 150px;
+    height: auto;
+    margin-left: 570px;
+    margin-top: 20px;
+  }*/
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    top: 50px;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  .slideshow button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #f1f1f1;
+    background: linear-gradient(to right, rgb(245, 3, 172), rgb(109, 10, 48));
+    margin-left: 220px;
+    position: absolute;
+    top: 80%;
+    left: 215px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+    /*height: 50px;
+    float: center;*/
+  }
+
+  .slideshow .arrow{
+    width: 30px;
+    height: 20px;
+    display: none;
+  }
+
+  .slideshow button:hover{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slideshow button:hover .arrow{
+    display: block;
+  }
+  
+  .about {
+	  display: block;
+	  width: 450px;
+	  height: 300px;
+	  margin-left: 20px;
+	  margin-bottom: 100px;
+   }
+  
+  /*.boo {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top: 50px;
+    margin-top: 100px;
+    /*max-width: 600px;
+    height: 300px;
+    margin: 0 370px 0 370px;
+    position: relative;
+    /*background-color: #8c00ff54;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.2);
+  }*/
+  
+  .boo img {
+    vertical-align: middle;
+    height: 300px;
+    /*margin-left: 400px;*/
+  }
+  
+  .kin {
+    animation-name: kin;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes kin {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  .boo{
+    background: linear-gradient(to right, rgb(245, 3, 172), rgb(109, 10, 48));
+    width: 10px;
+    height: 300px;
+    margin-left: 100px;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  /*.about, .invest, .contact{
+    
+  }*/
+
+  .hut{
+    background-color: #00000069;
+    width: 1329.7px;
+    height: 400px;
+    position: relative;
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+ /*.notes h2{
+    grid-template-columns: auto auto auto auto;
+  }*/
+
+  nav{
+    flex: 1;
+    text-align: center;
+  }
+
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .footer{
+    text-align: center;
+  }
+  
+  .footer img{
+    height: 15px;
+    width: 15px;
+    margin: 60px;
+  }
+
+ /* @media only screen and (min-width: 400px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 120px;
+      border-style: dashed;
+      border-color: black;
+      padding: 20px 20px;
+    }
+  
+    .grid-container > div{
+      margin-top: 80px;
+      margin-left: 50px;
+      border-style: dashed;
+      border-color: black;
+    }
+  }*/
+  /*#myDropdown {
+  position: relative;
+  display: inline-block;
+  }*/
+
+  /*.dropdown-content a:hover {background-color: #ddd;}*/
+
+  /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+</style>
 </head>
 <body>
-    <header>
-        <h1>MIRKS Image Compression</h1>
-        <p>Compress your images using the powerful MIRKS algorithm.</p>
-    </header>
-    <main>
+<div class="bgimg">
+    <img src="mamidav.png">
+</div>
+<div class="grid-container" class= "dropdown">
+    <a href="index.html"><img src="mamidav.png" alt="HOME" class="logo"></a>
+    <div class="header">
+        <h1>
+            MIRKS IMAGE COMPRESSION APP
+            //Added just to check that my branch works fine
+        </h1>
+<main>
         <section>
             <h2>Upload Image</h2>
             <form id="upload-form">
@@ -27,6 +422,85 @@
     <footer>
         <p>&copy; 2023 MIRKS Image Compression</p>
     </footer>
-    <script src="app.js"></script>
+    </div>
+    <div onclick="myFunction()" class="dropbtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="farms.html">FARMS</a>
+            <a href="foods.html">FOODS</a>
+            <a href="store.html">STORE</a>
+            <a href="invest.html">INVEST!</a>
+            <a href="more.html">MORE</a>
+        </div>
+    </div>
+</div>
+<div class="Search">
+    <form class="searchbox" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<div class="banner">
+    <div class="slideshow fade">
+        <button type="button">Buy now<img src="arrow.png" class="arrow" alt="buy now">
+        </button>
+        <img src="supermarket.png" alt="Farm" style="width:100%">
+    </div>
+    <div class="slideshow fade">
+        <button type="button">Buy now<img src="arrow.png" class="arrow" alt="buy now">
+        </button>
+        <img src="small chops.png" alt="Food" style="width:100%">
+    </div>
+    <div class="slideshow fade">
+        <button type="button">Buy now<img src="arrow.png" class="arrow" alt="buy now">
+        </button>
+        <img src="fish.png" alt="Store" style="width:100%">
+    </div>
+
+    <div class="slideshow fade">
+        <button type="button">Buy now<img src="arrow.png" class="arrow" alt="buy now"> </button>
+        <img src="fruits.png" alt="Store" style="width:100%">
+    </div>
+    <footer>
+        <p>&copy; 2023 MIRKS Image Compression</p>
+    </footer>
+<script>
+document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var imageInput = document.getElementById('image-input');
+            var resultSection = document.getElementById('result-section');
+            var resultContainer = document.getElementById('result-container');
+
+            resultSection.classList.add('hidden');
+
+            var file = imageInput.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var imageData = e.target.result;
+                    compressImage(imageData, function(compressedData) {
+                        resultContainer.innerHTML = '<img src="' + compressedData + '" alt="Compressed Image">';
+                        resultSection.classList.remove('hidden');
+                    });
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function compressImage(imageData, callback) {
+            // Perform image compression logic here
+            // Replace this with your actual image compression code
+
+            // For demonstration purposes, we'll simply return the original image data
+            callback(imageData);
+        }
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
 </body>
 </html>
+

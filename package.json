@@ -1,13 +1,24 @@
 {
-  "name": "MIRKS Image Compression App",
-  "description": "A web application for compressing images using server-side compression algorithm.",
+  "name": "mirks",
   "version": "1.0.0",
-  "author": "Maranatha Adesanya",
-  "dependencies": {
-    "flask": "^2.2.2",
-    "libjpeg": "^2.1.0"
-  },
+  "description": "The MIRKS Image Compression App is a web application that allows users to compress images using a server-side image compression algorithm. It provides an intuitive user interface for selecting and compressing images, and displays the compressed image to the user.",
+  "main": "index.js",
   "scripts": {
-    "start": "python MIRKS.py"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/maranathaadesanya/MIRKS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maranathaadesanya/MIRKS/issues"
+  },
+  "homepage": "https://github.com/maranathaadesanya/MIRKS#readme"
+}
+"dependencies": {
+  "Flask": "^2.2.2",
+  "Pillow": "^9.4.0"
 }
